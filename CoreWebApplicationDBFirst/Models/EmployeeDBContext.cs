@@ -23,10 +23,12 @@ namespace CoreWebApplicationDBFirst.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Employee>().ToTable("Employee");
+           //// modelBuilder.Entity<Address>().ToTable("Address");
             modelBuilder.Entity<Employee>(entity =>
             {
                 entity.Property(e => e.Name).IsRequired();
             });
+           
         }
     }
 }
